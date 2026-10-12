@@ -1,0 +1,38 @@
+:root {
+  --bg: #0b0f14; --panel: #121a23; --line: #233142; --text: #e6edf3; --muted: #9aa7b4;
+  --accent: #38bdf8; --green: #22c55e; --todo: #f59e0b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-image: linear-gradient(rgba(80,120,160,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(80,120,160,.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+.brand { font: 700 18px ui-monospace, Consolas, monospace; color: var(--green); text-decoration: none; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 14px; font-size: 14px; }
+nav a:hover, nav a.on { color: var(--text); }
+.langs { display: flex; gap: 6px; margin: 0 0 20px; }
+.langs button {
+  background: var(--panel); color: var(--muted); border: 1px solid var(--line); border-radius: 8px;
+  padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
+}
+.langs button.on { color: var(--text); border-color: var(--accent); }
+section[lang] { display: none; }
+section[lang].on { display: block; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 6px; }
+h2 { font-size: 19px; margin: 32px 0 8px; color: var(--accent); }
+.muted { color: var(--muted); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 16px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+a { color: var(--accent); }
+.todo { color: var(--todo); font-weight: 700; }
+.hero { text-align: center; padding: 32px 0 8px; }
+.hero h1 { font-size: 36px; }
+.btn { display: inline-block; background: var(--green); color: #04130a; font-weight: 700; padding: 10px 18px; border-radius: 10px; text-decoration: none; margin-top: 12px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 13px; text-align: center; }
+@media (max-width: 520px) { th, td { display: block; padding: 4px 0; } tr { display: block; padding: 8px 0; border-bottom: 1px solid var(--line); } th, td { border: 0; } thead { display: none; } }
